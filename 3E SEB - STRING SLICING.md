@@ -1,30 +1,56 @@
-# Exp.No:3e
-## SEB - STRING SLICING
-
----
+## Exp.No:3e
+## SEB - Write a Python program to find sequences of lowercase letters joined with a underscore.
 
 ### AIM  
-To write a Python function that accepts a string and forms a new string by reversing the characters from the **4th position to the 10th position** with **alternate characters**, and then prints the new string.
-
----
+To  write a Python program to find sequences of lowercase letters joined with a underscore.
 
 ### ALGORITHM
 
-1. Begin the program.  
-2. Accept a string as input.  
-3. Take a slice of the input string from index **2** to **10** (Python uses 0-based indexing, so index 2 refers to the 3rd character, i.e., the 4th character in natural terms).  
-4. Reverse the sliced substring.  
-5. Extract every second character from the reversed substring using slicing (`[::2]`).  
-6. Print the final processed string.  
-7. Terminate the program.
+1.Start the program.
 
----
+2.Import the re module for regular expressions.
+
+3.Define an input string that contains words or sequences.
+
+4.Define the regular expression pattern:
+r'\b[a-z]+_[a-z]+\b'
+
+5.[a-z]+ matches one or more lowercase letters.
+
+6._ matches the underscore character.
+
+7.The second [a-z]+ again matches one or more lowercase letters.
+
+8.\b ensures the match is a complete word.
+
+9.Use re.findall() to extract all matches from the string.
+
+10.Print the matched sequences.
+
+11.End the program.
+
 
 ### PROGRAM
+### REG NO:212223090008
+### NAME:Harinishri S
+```
+import re
+s=input()
+if re.search(r'[a-z]+_+[a-z]',s):
+    print("Found a match!")
+else:
+    print("Not matched!")
+```
 
-```
-```
 
 ### OUTPUT
 
+![screeenshotreg](https://github.com/user-attachments/assets/2ea21d95-1919-4173-b77b-685213ae9dad)
+
+
+
 ### RESULT
+
+The program successfully finds and returns all sequences that consist of lowercase letters joined with a single underscore, ignoring uppercase letters and other patterns.
+
+
